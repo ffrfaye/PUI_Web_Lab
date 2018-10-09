@@ -12,5 +12,15 @@ function addListItem() {
 }
 
 function deleteListitem(item) {
+  // remove li element (item) from ol element (item.parentNode)
   item.parentNode.removeChild(item);
+}
+
+function completeListItem(item) {
+  if(item.checked) {
+    item.parentNode.style.textDecoration="line-through";
+  }
+  else {
+    item.parentNode.style.textDecoration="none";
+  }
 }
